@@ -1,6 +1,8 @@
 # react-http-static
 
 [![Build Status](https://travis-ci.org/Jalle19/react-http-static.svg?branch=travis)](https://travis-ci.org/Jalle19/react-http-static)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Jalle19/react-http-static/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/Jalle19/react-http-static/?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/Jalle19/react-http-static/badge.svg?branch=master)](https://coveralls.io/github/Jalle19/react-http-static?branch=master)
 
 This is a very basic helper for creating static web servers using `react/http`. It serves files from a specified 
 directory and can optionally be configured to require authentication.
