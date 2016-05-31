@@ -1,0 +1,29 @@
+{
+    "name": "jalle19/react-http-static",
+    "description": "A helper around react/http for creating static web servers",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sam Stenvall",
+            "email": "sam.stenvall@nordsoftware.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.4.0",
+        "react/http": "^0.4.1",
+        "psr/log": "^1.0",
+        "dflydev/apache-mime-types": "^1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.3"
+    },
+    "suggest": {
+        "psr/log": "Enables logging of received requests"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jalle19\\ReactHttpStatic\\": "src/"
+        }
+    }
+}
