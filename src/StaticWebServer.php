@@ -231,10 +231,15 @@ class StaticWebServer
      */
     public function getContentType($filePath)
     {
-        $pathInfo   = pathinfo($filePath);
-        $extension  = $pathInfo['extension'];
-        $repository = new PhpRepository();
+        $pathInfo = pathinfo($filePath);
 
+        if (!isset($pathInfo['extension'])) {
+            $extension = '';
+        } else {
+            $extension = $pathInfo['extension'];
+        }
+
+        $repository = new PhpRepository();
         $type = $repository->findType($extension);
 
         if ($type === null) {

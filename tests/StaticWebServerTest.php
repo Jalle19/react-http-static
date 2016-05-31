@@ -84,6 +84,7 @@ class StaticWebServerTest extends \PHPUnit_Framework_TestCase
             [[], '/bar/baz.css', $this->getWebroot() . '/bar/baz.css', 'text/css'],
             [[], '/foo.js', $this->getWebroot() . '/foo.js', 'application/javascript'],
             [[], '/plain.txt', $this->getWebroot() . '/plain.txt', 'text/plain'],
+            [[], '/noextension', $this->getWebroot() . '/noextension', 'text/plain'],
         ];
     }
 
