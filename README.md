@@ -38,7 +38,7 @@ $socket->listen(8080);
 
 // Create the server itself
 $httpServer      = new HttpServer($socket);
-$staticWebServer = new Jalle19\ReactHttpStatic\StaticWebServer($httpServer, __DIR__ . '/tests/webroot');
+$staticWebServer = new Jalle19\ReactHttpStatic\StaticWebServer($httpServer, '/var/www');
 
 // Apply our authentication handler
 $handlerCallback = function ($username, $password) {
