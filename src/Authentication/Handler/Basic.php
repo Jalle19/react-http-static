@@ -7,7 +7,7 @@ use React\Http\Response;
 
 /**
  * Class Basic
- * @package Jalle19\ReactHttpStatic\Authentication\Handler
+ * @package   Jalle19\ReactHttpStatic\Authentication\Handler
  * @copyright Copyright &copy; Sam Stenvall 2016-
  * @license   @license https://opensource.org/licenses/MIT
  */
@@ -20,13 +20,13 @@ class Basic implements HandlerInterface
     private $realm;
 
     /**
-     * @var \Closure
+     * @var callable
      */
     private $implementation;
 
 
     /**
-     * @param \Closure $implementation
+     * @param callable $implementation
      * @param string   $realm
      */
     public function __construct($realm, $implementation)
@@ -57,7 +57,7 @@ class Basic implements HandlerInterface
                 return false;
             }
 
-            return $this->implementation->__invoke($parts[0], $parts[1]);
+            return call_user_func($this->implementation, $parts[0], $parts[1]);
         }
 
         return false;
