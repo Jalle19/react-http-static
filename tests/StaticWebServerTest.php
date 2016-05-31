@@ -93,7 +93,7 @@ class StaticWebServerTest extends \PHPUnit_Framework_TestCase
      */
     private function getWebroot()
     {
-        return realpath(__DIR__ . '/webroot');
+        return realpath(__DIR__ . '/../resources/webroot');
     }
 
 }
