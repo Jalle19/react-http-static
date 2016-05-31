@@ -145,11 +145,15 @@ class StaticWebServer
 
 
     /**
-     * @param HandlerInterface $authenticationHandler
+     * @param HandlerInterface|null $authenticationHandler
+     *
+     * @return StaticWebServer
      */
-    public function setAuthenticationHandler(HandlerInterface $authenticationHandler)
+    public function setAuthenticationHandler($authenticationHandler)
     {
         $this->authenticationHandler = $authenticationHandler;
+
+        return $this;
     }
 
 
