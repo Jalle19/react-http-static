@@ -1,5 +1,7 @@
 # react-http-static
 
+[![Build Status](https://travis-ci.org/Jalle19/react-http-static.svg?branch=travis)](https://travis-ci.org/Jalle19/react-http-static)
+
 This is a very basic helper for creating static web servers using `react/http`. It serves files from a specified 
 directory and can optionally be configured to require authentication.
 
