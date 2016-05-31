@@ -5,7 +5,7 @@ directory and can optionally be configured to require authentication.
 
 ## Requirements
 
-* PHP >= 5.4.0
+* PHP >= 5.6
 
 ## Installation
 
