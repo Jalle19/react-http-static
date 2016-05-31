@@ -169,6 +169,7 @@ class StaticWebServerTest extends \PHPUnit_Framework_TestCase
         return [
             [['foo.htm', 'foo.html'], '/', $this->getWebroot() . '/foo.html', 'text/html'],
             [['index.htm', 'index.html'], '/', $this->getWebroot() . '/index.htm', 'text/html'],
+            [['super invalid'], '/', false, 'text/plain'],
             [[], '/bar/baz.css', $this->getWebroot() . '/bar/baz.css', 'text/css'],
             [[], '/foo.js', $this->getWebroot() . '/foo.js', 'application/javascript'],
             [[], '/plain.txt', $this->getWebroot() . '/plain.txt', 'text/plain'],
