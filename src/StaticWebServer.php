@@ -193,17 +193,21 @@ class StaticWebServer
 
                 $response->end(file_get_contents($filePath));
             } else {
-                $this->logger->error('HTTP request failed, file unreadable ({filePath})', [
-                    'filePath' => $filePath,
-                ]);
+                if ($this->logger !== null) {
+                    $this->logger->error('HTTP request failed, file unreadable ({filePath})', [
+                        'filePath' => $filePath,
+                    ]);    
+                }
                 
                 $response->writeHead(403, ['Content-Type' => 'text/plain']);
                 $response->end("Forbidden\n");
             }
         } else {
-            $this->logger->error('HTTP request failed, file not found ({filePath})', [
-                'filePath' => $filePath,
-            ]);
+            if ($this->logger !== null) {
+                $this->logger->error('HTTP request failed, file not found ({filePath})', [
+                    'filePath' => $filePath,
+                ]);    
+            }
             
             $response->writeHead(404, ['Content-Type' => 'text/plain']);
             $response->end("Not found\n");
