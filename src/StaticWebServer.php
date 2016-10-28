@@ -167,7 +167,7 @@ class StaticWebServer
         $filePath    = $this->resolvePath($requestPath);
 
         if ($this->logger !== null) {
-            $this->logger->info('Got HTTP request (request path: {requestPath}, resolved path: {resolvedPath})', [
+            $this->logger->debug('Got HTTP request (request path: {requestPath}, resolved path: {resolvedPath})', [
                 'requestPath'  => $requestPath,
                 'resolvedPath' => $filePath,
             ]);
